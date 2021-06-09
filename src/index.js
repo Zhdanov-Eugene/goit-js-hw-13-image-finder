@@ -11,6 +11,7 @@ import '../node_modules/basiclightbox/dist/basicLightbox.min.css';
 import cardTamplate from './tamplates/card-markup';
 import './sass/main.scss';
 
+
 const formRef = document.querySelector('#search-form');
 const loadBtnRef = document.querySelector('.load-button');
 const galleryRef = document.querySelector('.gallery');
@@ -25,7 +26,7 @@ function onSearchBtn(e) {
     e.preventDefault();
 
     imagesApi.query = e.currentTarget.elements.query.value;
-
+    // сброс значений
     imagesApi.resetPage();
     clearMarkup();
     getImages();
